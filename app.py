@@ -152,3 +152,15 @@ def pdf_query():
 
 if __name__ == '__main__':  # Corrected _name_ to __name__
     app.run(debug=False)
+
+
+from werkzeug.middleware.dispatcher import DispatcherMiddleware
+from werkzeug.wrappers import Response
+
+@app.route('/')
+def home():
+    return Response("Flask app is running!", content_type="text/plain")
+
+# Export app for Vercel
+app = DispatcherMiddleware(app)
+
