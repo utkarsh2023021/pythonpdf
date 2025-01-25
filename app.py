@@ -55,10 +55,10 @@ def pdf_query():
 
         # Configure the generation settings
         generation_config = {
-            "temperature": 0.7,
+            "temperature": 2.0,
             "top_p": 0.95,
             "top_k": 40,
-            "max_output_tokens": 81920,
+            "max_output_tokens": 8192,
             "response_mime_type": "text/plain",
         }
 
